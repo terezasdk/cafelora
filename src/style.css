@@ -257,6 +257,13 @@ nav a:hover {
   height: auto;
 }
 
+.gallery__description {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 960px;
@@ -294,5 +301,9 @@ nav a:hover {
     padding-top: 4rem;
 
     text-align: center;
+  }
+
+  .nav-btn {
+    display: none;
   }
 }
