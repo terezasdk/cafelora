@@ -48,8 +48,26 @@ const item3 = {
 };
 
 const drinkInfoElm = document.querySelector('.drink__info');
-drinkInfoElm.innerHTML += Layer(item1);
-drinkInfoElm.innerHTML += Layer(item2);
-drinkInfoElm.innerHTML += Layer(item3);
+//drinkInfoElm.innerHTML += Layer(item1);
+//drinkInfoElm.innerHTML += Layer(item2);
+//drinkInfoElm.innerHTML += Layer(item3);
 
-//Použijte vaši komponentu a pomocí vlastnosti innerHTML zapojte do stránky tři ingredience pro cappuccino. Stránka by měla pro uživatele vypadat stejně jako na začátku.
+// 6 Seznam ingrediencí (dělá to to samé jako 5, jen je to jiný kód)
+const layers = [
+  {
+    color: '#feeeca',
+    label: 'mléčná pěna',
+  },
+  {
+    color: '#fed7b0',
+    label: 'teplé mléko',
+  },
+  {
+    color: '#613916',
+    label: 'espresso',
+  },
+];
+
+layers.forEach((item) => {
+  drinkInfoElm.innerHTML += Layer(item); // const drinkInfoElm definuju na řádku 50
+});
