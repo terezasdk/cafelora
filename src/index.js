@@ -1,4 +1,5 @@
 import './style.css';
+import { Layer } from './Layer/index'; // z úkolu 5
 
 console.log('funguju!');
 
@@ -30,4 +31,25 @@ orderBtnElm.addEventListener('click', () => {
   }
 });
 
-//Při opětovném kliknutí na tlačítko chceme zařídit, aby se objednávka zrušila a nápis na tlačítku se vrátil zpět na Objednat. Tohoto můžete docílit například tak, že si vytvoříte globální proměnnou ordered, která bude obsahovat true nebo false podle toho, zde je nápoj objednaný či nikoliv.
+// 5 Ingredience jako komponenty
+const item1 = {
+  color: '#feeeca',
+  label: 'mléčná pěna',
+};
+
+const item2 = {
+  color: '#fed7b0',
+  label: 'teplé mléko',
+};
+
+const item3 = {
+  color: '#613916',
+  label: 'espresso',
+};
+
+const drinkInfoElm = document.querySelector('.drink__info');
+drinkInfoElm.innerHTML += Layer(item1);
+drinkInfoElm.innerHTML += Layer(item2);
+drinkInfoElm.innerHTML += Layer(item3);
+
+//Použijte vaši komponentu a pomocí vlastnosti innerHTML zapojte do stránky tři ingredience pro cappuccino. Stránka by měla pro uživatele vypadat stejně jako na začátku.
